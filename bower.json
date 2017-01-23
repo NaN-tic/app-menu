@@ -1,0 +1,21 @@
+{
+  "name": "tryton-menu-helper",
+  "description": "Created a menu from an array",
+  "main": "index.js",
+  "authors": [
+    "nan-tic"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "menu",
+    "tryton"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
