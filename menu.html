@@ -9,13 +9,12 @@
 
 <ion-content padding>
 	<br>
-	<h1 class="title"> {{ title }}</h1>
+	<h1 class="title"> {{ title | translate}}</h1>
 	<br>
   	<ion-list>
     	<button ion-button *ngFor="let entry of menu" (click)="entryTapped($event, entry)" class="list-items" round block>
       	<!-- <ion-icon name="{{item.icon}}" item-left></ion-icon> -->
-      	{{entry.name}}
+      	{{entry.name | translate}} 
     	</button>
   	</ion-list>
 </ion-content>
-

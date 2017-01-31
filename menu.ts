@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Locker } from 'angular2-locker';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
     selector: 'page-menu',
@@ -24,7 +24,11 @@ export class MenuPage {
     menu: Array<{name: string, page: any, params?: {}}>;
     title: string;
 
-    constructor(public navCtrl: NavController) { }
+    constructor(public navCtrl: NavController, translate: TranslateService) {
+      // Set default languages
+        translate.setDefaultLang('en');
+        translate.use('es')
+    }
 
     /**
      * Listener for the menu buttons, when a button is pressed in the menu
@@ -33,8 +37,8 @@ export class MenuPage {
      * @param {Object} entry  Entry information (name and page to go)
      */
     entryTapped($event, entry) {
-        console.log("Tapped entry", entry);
-        this.navCtrl.push(entry.page, entry.params);
+        console.log("Tapped entry", entry, entry.params);
+        this.navCtrl.push(entry.page, {param: entry.params});
     }
 
 }
