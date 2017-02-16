@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture } from '@angular/core/testing';
 import { async } from '@angular/core/testing';
 import {} from 'jasmine';
 import { TestUtils } from '../../test';

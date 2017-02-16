@@ -3,18 +3,15 @@
 <ion-header>
   <!-- Hide back button for this specific view-->
   <ion-navbar>
-    <ion-title>Mifarma</ion-title>
+    <ion-title>{{ title | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<br>
-	<h1 class="title"> {{ title | translate}}</h1>
-	<br>
-  	<ion-list>
-    	<button ion-button *ngFor="let entry of menu" (click)="entryTapped($event, entry)" class="list-items" round block>
+  	<ion-list class="list-items">
+    	<button [disabled]="entry.disabled" ion-button *ngFor="let entry of menu" (click)="entryTapped($event, entry)" class="list-items" round block>
       	<!-- <ion-icon name="{{item.icon}}" item-left></ion-icon> -->
-      	{{entry.name | translate}} 
+      	{{entry.name | translate}}
     	</button>
   	</ion-list>
 </ion-content>

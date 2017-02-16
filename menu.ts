@@ -21,7 +21,7 @@ export class MenuPage {
      * Array contaning the menus
      * @type {Array}
      */
-    menu: Array<{name: string, page: any, params?: {}}>;
+    menu: Array<{name: string, page: any, params?: {}, disabled?: boolean}>;
     title: string;
 
     constructor(public navCtrl: NavController, translate: TranslateService) {
