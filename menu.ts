@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TranslateService } from 'ng2-translate';
 
 @Component({
     selector: 'page-menu',
@@ -24,10 +23,7 @@ export class MenuPage {
     menu: Array<{name: string, page: any, params?: {}, disabled?: boolean}>;
     title: string;
 
-    constructor(public navCtrl: NavController, translate: TranslateService) {
-      // Set default languages
-        translate.setDefaultLang('en');
-        translate.use('es')
+    constructor(public navCtrl: NavController) {
     }
 
     /**
