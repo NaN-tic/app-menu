@@ -34,7 +34,7 @@ export class MenuPage {
      */
     entryTapped($event, entry) {
         console.log("Tapped entry", entry, entry.params);
-        this.navCtrl.push(entry.page, {param: entry.params});
+        this.navCtrl.push(entry.page, {params: entry.params});
     }
 
 }
